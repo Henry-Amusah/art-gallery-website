@@ -8,3 +8,174 @@
 html {
   font-size: 62.5%;
 }
+
+header {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+}
+.hero .dark-hero {
+  width: 45rem;
+  background-color: #151515;
+  padding-right: 45rem;
+}
+.hero .dark-hero h1 {
+  font-family: "Big Shoulders Display";
+  font-size: 9.6rem;
+  line-height: 8.8rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 20%;
+  padding-left: 15.9rem;
+  background: -webkit-linear-gradient(0deg, #ffffff 73.8%, #151515 40%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.04rem;
+}
+.hero .hero-img {
+  background: url("/assets/desktop/image-hero@2x.jpg");
+  width: 50%;
+  min-height: 85vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-text {
+  position: absolute;
+  top: 20%;
+  left: 65%;
+  display: flex;
+  flex-direction: column;
+}
+.hero-text h1 {
+  display: none;
+}
+.hero-text p {
+  font-family: "Outfit";
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+  width: 40rem;
+  margin-bottom: 5rem;
+}
+.hero-text .location-btn {
+  font-family: "Big Shoulders Display";
+  font-size: 2rem;
+  cursor: pointer;
+  letter-spacing: 0.2rem;
+  width: 24rem;
+  display: flex;
+  align-items: center;
+}
+.hero-text .location-btn a {
+  background-color: #151515;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 2.2rem 3rem;
+  transition: all 0.2s ease-in;
+}
+.hero-text .location-btn span {
+  background-color: #D5966C;
+  padding: 2rem 2rem;
+  transition: all 0.2s ease-in;
+}
+.hero-text .location-btn:hover a {
+  background-color: #D5966C;
+}
+.hero-text .location-btn:hover span {
+  background-color: #151515;
+}
+
+/***************Responsive layout**************/
+@media screen and (max-width: 1050px) {
+  .hero .hero-img {
+    background: url("/assets/desktop/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 950px) {
+  .hero .dark-hero {
+    display: none;
+  }
+  .hero .hero-img {
+    background: url("/assets/tablet/image-hero@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 55%;
+  }
+  .hero-text {
+    left: 50%;
+  }
+  .hero-text p {
+    font-family: "Outfit";
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    width: 35rem;
+    margin-bottom: 5rem;
+  }
+  .hero-text h1 {
+    display: block;
+    font-family: "Big Shoulders Display";
+    font-size: 7rem;
+    line-height: 7rem;
+    text-transform: uppercase;
+    padding-bottom: 5rem;
+  }
+}
+@media screen and (max-width: 950px) and (max-width: 790px) {
+  .hero-text h1 {
+    font-family: "Big Shoulders Display";
+    font-size: 6rem;
+    line-height: 5rem;
+    padding-bottom: 3rem;
+  }
+  .hero-text p {
+    width: 30rem;
+  }
+}
+@media screen and (max-width: 950px) and (max-width: 650px) {
+  .hero-text h1 {
+    font-family: "Big Shoulders Display";
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+    padding-bottom: 2rem;
+  }
+  .hero-text p {
+    width: 30rem;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero .hero-img {
+    background: url("/assets/mobile/image-hero@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 45vh;
+  }
+  .hero-text {
+    left: 5%;
+    top: 50%;
+  }
+  .hero-text h1 {
+    font-family: "Big Shoulders Display";
+    font-size: 6rem;
+    line-height: 5rem;
+    padding-bottom: 2rem;
+  }
+  .hero-text p {
+    width: 30rem;
+    margin-bottom: 3rem;
+  }
+}

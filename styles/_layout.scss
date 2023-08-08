@@ -1,0 +1,213 @@
+// Hero section
+header{
+    min-height: 100vh;
+    // padding-right:  5rem;
+    position: relative;
+    width: 100%;
+}
+
+.hero{
+    display: flex;
+    width: 100%;
+    
+    .dark-hero{
+        // min-height: 85vh;
+        width: 45rem;
+        background-color: $dark;
+        padding-right: 45rem;
+        //position: relative;
+        //padding: 40rem 4rem;
+
+        h1{
+            @include head-xl();
+            text-transform: uppercase;
+            //color: white;
+            position: absolute;
+            top: 20%;
+            //left: 90px;
+            padding-left: 15.9rem;
+            background: -webkit-linear-gradient(0deg, $white 73.8%, $dark 40%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.04rem;
+        }
+    }
+
+    .hero-img{
+        background: url('/assets/desktop/image-hero@2x.jpg');
+        width: 50%;
+        min-height: 85vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    // img{
+    //     width: 45%;
+    //     height: 85vh;
+    // }
+}
+
+.hero-text{
+    position: absolute;
+    top: 20%;
+    left: 65%;
+    display: flex;
+    //justify-content: space-around;
+    flex-direction: column;
+    // width: 80rem;
+    //padding: 0 5rem;
+
+    h1{
+        display: none;
+    }
+
+   p{
+    @include body-md();
+    width: 40rem;
+    margin-bottom: 5rem;
+   }
+
+   .location-btn{
+    font-family: 'Big Shoulders Display';
+    font-size: 2rem;
+    cursor: pointer;
+    letter-spacing: .2rem;
+    width: 24rem;
+    display: flex;
+    align-items: center;
+    // transition: all 2s ease-in;
+
+    a{
+        background-color: $dark;
+        color: $white;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 2.2rem 3rem;
+        transition: all .2s ease-in;
+        // height: 100%;
+    }
+    
+    span{
+        background-color: $brown;
+        padding: 2rem 2rem;
+        transition: all .2s ease-in;
+    }
+
+    &:hover a{
+        background-color: $brown;
+    }
+    &:hover span{
+        background-color: $dark;
+    }
+
+   }
+}
+
+/***************Responsive layout**************/
+//Desktop
+@media screen and (max-width: 1050px){
+    .hero{
+        // .dark-hero{
+        //     min-height: 80vh;
+        // }
+        .hero-img{
+            // height: 80rem;
+            background: url('/assets/desktop/image-hero.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}
+
+// Tablet
+@media screen and (max-width: 950px){
+    .hero{
+        .dark-hero{
+            display: none;
+        }
+
+        .hero-img{
+            // height: 80rem;
+            background: url('/assets/tablet/image-hero@2x.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 55%;
+        }
+
+        &-text{
+            left: 50%;
+
+            p{
+                @include body-sm();
+                width: 35rem;
+                margin-bottom: 5rem;
+            }
+
+            h1{
+                display: block;
+                @include head-lg();
+                text-transform: uppercase;
+                padding-bottom: 5rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 790px){
+        .hero-text{
+            h1{
+                @include head-md();
+                padding-bottom: 3rem;
+            }
+            p{
+                width: 30rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 650px){
+        .hero-text{
+            h1{
+                @include head-sm();
+                padding-bottom: 2rem;
+            }
+            p{
+                width: 30rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
+
+// Mobile
+@media screen and (max-width: 500px){
+    .hero{
+        .hero-img{
+            // height: 80rem;
+            background: url('/assets/mobile/image-hero@2x.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            min-height: 45vh;
+        }
+
+        &-text{
+            left: 5%;
+            top: 50%;
+
+            h1{
+                @include head-md();
+                padding-bottom: 2rem;
+            }
+            p{
+                width: 30rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
