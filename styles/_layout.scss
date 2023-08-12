@@ -1,4 +1,4 @@
-// Hero section
+        /**************Hero section***************/
 header{
     min-height: 100vh;
     // padding-right:  5rem;
@@ -15,8 +15,6 @@ header{
         width: 45rem;
         background-color: $dark;
         padding-right: 45rem;
-        //position: relative;
-        //padding: 40rem 4rem;
 
         h1{
             @include head-xl();
@@ -43,11 +41,6 @@ header{
         background-position: center;
 
     }
-
-    // img{
-    //     width: 45%;
-    //     height: 85vh;
-    // }
 }
 
 .hero-text{
@@ -105,35 +98,41 @@ header{
 
    }
 }
-
+        /*************Main section***************/
 main.container{
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 0 5rem;
-
-    div.top-gallery-container{
+}
+div.top-gallery-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    // padding: 6rem;
+    width: 90%;
+    margin: 0 auto;
+    
+    .article-1{
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        // padding: 6rem;
-        width: 90%;
-        margin: 0 auto;
+        // justify-content: space-around;
+        flex-direction: column;
+        // width: 40%;
+        // height: 50%;
+        padding-right: 3rem;
+        // padding: 5rem 3rem;
     
-        .article-1{
-            width: 40%;
-            padding-right: 3rem;
-    
-            h2{
-                @include head-md();
-                text-transform: uppercase;
-                margin-bottom: 4rem;
-                line-height: 6rem
-            }
-            p{
-                @include body-md();
-                letter-spacing: .01rem;
-            }
+        h2{
+            @include head-md();
+            text-transform: uppercase;
+            // margin-bottom: 2rem;
+            line-height: 6rem
+        }
+        p{
+            @include body-md();
+            letter-spacing: .01rem;
+            margin-top: 2rem;
+        }
         }
     
         .img-1{
@@ -141,52 +140,90 @@ main.container{
         }
     }
 
-    div.bottom-gallery-container{
-        display: flex;
-        width: 90%;
-        margin: 0 auto;
-        padding: 5rem 0;
+div.bottom-gallery-container{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5rem 0;
 
-        .img-2{
-            width: 100%;
-            height: 100%;
+    .img-2{
+        width: 100%;
+        height: 100%;
+    }
+
+    .bottom-inner-container{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding-left: 5rem;
+
+        .img-3{
+            // height: 50%;
+            margin-bottom: 5rem;
+            // width: 100%;
         }
 
-        .bottom-inner-container{
+        .article-2{
+            background-color: $dark;
+            color: $white;
+            padding: 10rem;
+            // height: 50%;
+            width: 100%;
             display: flex;
+            align-items: center;
             flex-direction: column;
-            width: 50%;
-            padding-left: 5rem;
-
-            .img-3{
-                height: 50%;
-                padding-bottom: 5rem;
-                // width: 100%;
+            h2{
+                @include head-md();
+                margin-bottom: 4rem;
+                text-transform: uppercase;
+                line-height: 6rem;
             }
 
-            .article-2{
-                background-color: $dark;
-                color: $white;
-                padding: 5rem;
-                height: 50%;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                h2{
-                    @include head-md();
-                    margin-bottom: 4rem;
-                    text-transform: uppercase;
-                    line-height: 6rem;
-                }
-                p{
-                    @include body-md(); 
-                }
+            p{
+                @include body-md(); 
+            }
             }
         }
     }
-}
 
+        /******************Footer section******************/
+footer{
+    // padding-top: 10rem;
+    background: $dark;
+    
+    // display: grid;
+    // grid-template-columns: 1fr 2fr 1fr;
+    // gap: 4rem;
+    .footer-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $white;
+        min-height: 20vh;
+        padding: 5rem 4rem;
+        width: 90%;
+        margin: 0 auto;
+
+        h3{
+            @include head-sm;
+            text-transform: uppercase;
+            text-align: left;
+        }
+
+        p{
+            @include body-sm();
+            text-align: left;
+            width: 40%;
+        }
+        
+        .socials :not(:last-child){
+            margin-right: 2rem;
+        }
+        .socials img{
+            height: 2.5rem;
+        }
+    }
+}
 
 
 /***************Responsive layout**************/
@@ -207,7 +244,7 @@ main.container{
 }
 
 // Tablet
-@media screen and (max-width: 950px){
+@media screen and (max-width: 960px){
     .hero{
         .dark-hero{
             display: none;
@@ -240,6 +277,27 @@ main.container{
         }
     }
 
+    div.top-gallery-container{
+        .article-1 h2{
+            font-size: 4rem;
+            line-height: 4rem;
+            margin-bottom: 0;
+        }
+    }
+
+    div.bottom-gallery-container{
+        .bottom-inner-container{
+            .article-2{
+                padding: 4rem;
+
+                h2{
+                    font-size: 4.5rem;
+                    line-height: 5rem;
+                }
+            }
+        }
+    }
+
     @media screen and (max-width: 790px){
         .hero-text{
             h1{
@@ -250,6 +308,42 @@ main.container{
                 width: 30rem;
             }
         }
+
+        div.top-gallery-container{
+            flex-direction: column-reverse;
+
+            .img-1{
+                width: 100%;
+                margin-bottom: 4rem;
+            }
+        }
+        div.bottom-gallery-container{
+            flex-direction: column;
+
+            .bottom-inner-container{
+                width: 100%;
+                padding: 0;
+
+                .img-3{
+                    // width: 100%;
+                    margin-top: 5rem;
+                }
+            }
+        }
+        
+        footer{
+            .footer-container{
+                display: block;
+
+                p{
+                    width: 100%;
+                }
+            }
+            .footer-container :not(:first-child){
+                margin-top: 2rem;
+            }
+        }
+        
     }
 
     @media screen and (max-width: 650px){
@@ -267,7 +361,7 @@ main.container{
 }
 
 // Mobile
-@media screen and (max-width: 500px){
+@media screen and (max-width: 550px){
     .hero{
         .hero-img{
             // height: 80rem;
