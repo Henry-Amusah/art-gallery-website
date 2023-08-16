@@ -67,35 +67,36 @@ header{
     font-family: 'Big Shoulders Display';
     font-size: 2rem;
     cursor: pointer;
-    letter-spacing: .2rem;
+    letter-spacing: .3rem;
     width: 24rem;
+    height: 7rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $white;
     display: flex;
     align-items: center;
-    // transition: all 2s ease-in;
 
-    a{
+    & span:nth-of-type(1){
+        padding: 2.3rem 2rem;
         background-color: $dark;
-        color: $white;
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 2.2rem 3rem;
+        width: 80%;
         transition: all .2s ease-in;
-        // height: 100%;
     }
     
-    span{
+    & span:nth-of-type(2){
+        width: 20%;
         background-color: $brown;
-        padding: 2rem 2rem;
+        padding: 2.1rem 2rem;
         transition: all .2s ease-in;
     }
 
-    &:hover a{
+    &:hover span:nth-of-type(1){
         background-color: $brown;
     }
-    &:hover span{
+    &:hover span:nth-of-type(2){
         background-color: $dark;
     }
-
+    
    }
 }
         /*************Main section***************/
@@ -200,7 +201,7 @@ footer{
         align-items: center;
         color: $white;
         min-height: 20vh;
-        padding: 5rem 4rem;
+        padding: 9rem 4rem;
         width: 90%;
         margin: 0 auto;
 
@@ -221,6 +222,91 @@ footer{
         }
         .socials img{
             height: 2.5rem;
+            cursor: pointer;
+        }
+    }
+}
+
+/*****************Location page*****************/
+.map{
+    position: relative;
+
+    iframe{
+        min-height: 70vh;
+    }
+    .location-btn{
+        font-family: 'Big Shoulders Display';
+        font-size: 2rem;
+        cursor: pointer;
+        letter-spacing: .3rem;
+        width: 24rem;
+        height: 7rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $white;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: -1%;
+        left: 14rem;
+        // margin-left: 14rem;
+    
+        & span:nth-of-type(1){
+            padding: 1.9rem 2rem;
+            background-color: $brown;
+            width: 20%;
+            transition: all .2s ease-in;
+        }
+        
+        & span:nth-of-type(2){
+            width: 80%;
+            background-color: $dark;
+            padding: 2.1rem 2rem;
+            transition: all .2s ease-in;
+        }
+    
+        &:hover span:nth-of-type(1){
+            background-color: $dark;
+        }
+        &:hover span:nth-of-type(2){
+            background-color: $brown;
+        }
+    }
+}
+
+.location{
+    background-color: $dark;
+    color: $white;
+    min-height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 10rem 14rem;
+
+    h1{
+        @include head-lg();
+        text-transform: uppercase;
+    }
+
+    .h2{
+        @include head-md();
+        text-transform: uppercase;
+        display: none;
+    }
+
+    .address{
+        width: 50%;
+        h2{
+            @include head-sm();
+            color: $brown;
+            text-transform: uppercase
+        }
+
+        p{
+            @include body-md();
+        }
+
+        p:not(:last-child){
+            padding: 2rem 0;
         }
     }
 }
@@ -298,6 +384,13 @@ footer{
         }
     }
 
+    .location{
+        padding: 8rem;
+    }
+    .map .location-btn{
+        left: 8rem;
+    }
+
     @media screen and (max-width: 790px){
         .hero-text{
             h1{
@@ -343,6 +436,27 @@ footer{
                 margin-top: 2rem;
             }
         }
+
+        .location{
+            flex-direction: column;
+
+            h1{
+                display: none;
+            }
+
+            .h2{
+                display: block;
+                padding-bottom: 2.5rem;
+            }
+
+            .address{
+                width: 100%;
+
+                p:not(:last-child){
+                    padding: 1.5rem 0;
+                }
+            }
+        }
         
     }
 
@@ -386,5 +500,23 @@ footer{
                 margin-bottom: 3rem;
             }
         }
+    }
+
+    main.container{
+        padding: 0;
+    }
+
+    .map iframe{
+        min-height: 50vh;
+    }
+
+    .location{
+        padding: 5rem;
+        .h2{
+            font-size: 5rem;
+        }
+    }
+    .map .location-btn{
+        left: 0;
     }
 }

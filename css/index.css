@@ -69,28 +69,31 @@ header {
   font-family: "Big Shoulders Display";
   font-size: 2rem;
   cursor: pointer;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.3rem;
   width: 24rem;
+  height: 7rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
   display: flex;
   align-items: center;
 }
-.hero-text .location-btn a {
+.hero-text .location-btn span:nth-of-type(1) {
+  padding: 2.3rem 2rem;
   background-color: #151515;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 2.2rem 3rem;
+  width: 80%;
   transition: all 0.2s ease-in;
 }
-.hero-text .location-btn span {
+.hero-text .location-btn span:nth-of-type(2) {
+  width: 20%;
   background-color: #D5966C;
-  padding: 2rem 2rem;
+  padding: 2.1rem 2rem;
   transition: all 0.2s ease-in;
 }
-.hero-text .location-btn:hover a {
+.hero-text .location-btn:hover span:nth-of-type(1) {
   background-color: #D5966C;
 }
-.hero-text .location-btn:hover span {
+.hero-text .location-btn:hover span:nth-of-type(2) {
   background-color: #151515;
 }
 
@@ -184,7 +187,7 @@ footer .footer-container {
   align-items: center;
   color: #ffffff;
   min-height: 20vh;
-  padding: 5rem 4rem;
+  padding: 9rem 4rem;
   width: 90%;
   margin: 0 auto;
 }
@@ -207,6 +210,89 @@ footer .footer-container .socials :not(:last-child) {
 }
 footer .footer-container .socials img {
   height: 2.5rem;
+  cursor: pointer;
+}
+
+/*****************Location page*****************/
+.map {
+  position: relative;
+}
+.map iframe {
+  min-height: 70vh;
+}
+.map .location-btn {
+  font-family: "Big Shoulders Display";
+  font-size: 2rem;
+  cursor: pointer;
+  letter-spacing: 0.3rem;
+  width: 24rem;
+  height: 7rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -1%;
+  left: 14rem;
+}
+.map .location-btn span:nth-of-type(1) {
+  padding: 1.9rem 2rem;
+  background-color: #D5966C;
+  width: 20%;
+  transition: all 0.2s ease-in;
+}
+.map .location-btn span:nth-of-type(2) {
+  width: 80%;
+  background-color: #151515;
+  padding: 2.1rem 2rem;
+  transition: all 0.2s ease-in;
+}
+.map .location-btn:hover span:nth-of-type(1) {
+  background-color: #151515;
+}
+.map .location-btn:hover span:nth-of-type(2) {
+  background-color: #D5966C;
+}
+
+.location {
+  background-color: #151515;
+  color: #ffffff;
+  min-height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 10rem 14rem;
+}
+.location h1 {
+  font-family: "Big Shoulders Display";
+  font-size: 7rem;
+  line-height: 7rem;
+  text-transform: uppercase;
+}
+.location .h2 {
+  font-family: "Big Shoulders Display";
+  font-size: 6rem;
+  line-height: 5rem;
+  text-transform: uppercase;
+  display: none;
+}
+.location .address {
+  width: 50%;
+}
+.location .address h2 {
+  font-family: "Big Shoulders Display";
+  font-size: 3.6rem;
+  line-height: 3.6rem;
+  color: #D5966C;
+  text-transform: uppercase;
+}
+.location .address p {
+  font-family: "Outfit";
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+}
+.location .address p:not(:last-child) {
+  padding: 2rem 0;
 }
 
 /***************Responsive layout**************/
@@ -259,6 +345,12 @@ footer .footer-container .socials img {
     font-size: 4.5rem;
     line-height: 5rem;
   }
+  .location {
+    padding: 8rem;
+  }
+  .map .location-btn {
+    left: 8rem;
+  }
 }
 @media screen and (max-width: 960px) and (max-width: 790px) {
   .hero-text h1 {
@@ -296,6 +388,22 @@ footer .footer-container .socials img {
   footer .footer-container :not(:first-child) {
     margin-top: 2rem;
   }
+  .location {
+    flex-direction: column;
+  }
+  .location h1 {
+    display: none;
+  }
+  .location .h2 {
+    display: block;
+    padding-bottom: 2.5rem;
+  }
+  .location .address {
+    width: 100%;
+  }
+  .location .address p:not(:last-child) {
+    padding: 1.5rem 0;
+  }
 }
 @media screen and (max-width: 960px) and (max-width: 650px) {
   .hero-text h1 {
@@ -331,5 +439,20 @@ footer .footer-container .socials img {
   .hero-text p {
     width: 30rem;
     margin-bottom: 3rem;
+  }
+  main.container {
+    padding: 0;
+  }
+  .map iframe {
+    min-height: 50vh;
+  }
+  .location {
+    padding: 5rem;
+  }
+  .location .h2 {
+    font-size: 5rem;
+  }
+  .map .location-btn {
+    left: 0;
   }
 }
