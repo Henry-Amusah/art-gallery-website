@@ -2,12 +2,12 @@
 Phase 1 portfolio project
 
 ## Instructions
-Download the zip file
-Extract the file and open the art-gallery folder your prefered text editor
-pull up 
+1. Download the zip file
+2. Extract the file and open the art-gallery folder your prefered text editor.
+
 
 ### pull up your terminal or open the art-gallery folder in a terminal and run the following commands...
-"npm install" to install the necessary dependencies
-type "gulp" to spin up the scss compiler
+3. "npm install" to install the necessary dependencies
+4. type "gulp" to spin up the scss compiler
 
-finally, open with live server.
+5. finally, open with live server.

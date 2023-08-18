@@ -1,7 +1,6 @@
         /**************Hero section***************/
 header{
     min-height: 100vh;
-    // padding-right:  5rem;
     position: relative;
     width: 100%;
 }
@@ -11,7 +10,6 @@ header{
     width: 100%;
     
     .dark-hero{
-        // min-height: 85vh;
         width: 45rem;
         background-color: $dark;
         padding-right: 45rem;
@@ -19,10 +17,8 @@ header{
         h1{
             @include head-xl();
             text-transform: uppercase;
-            //color: white;
             position: absolute;
             top: 20%;
-            //left: 90px;
             padding-left: 15.9rem;
             background: -webkit-linear-gradient(0deg, $white 73.8%, $dark 40%);
             background-clip: text;
@@ -48,10 +44,7 @@ header{
     top: 20%;
     left: 65%;
     display: flex;
-    //justify-content: space-around;
     flex-direction: column;
-    // width: 80rem;
-    //padding: 0 5rem;
 
     h1{
         display: none;
@@ -110,23 +103,17 @@ div.top-gallery-container{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    // padding: 6rem;
     width: 90%;
     margin: 0 auto;
     
     .article-1{
         display: flex;
-        // justify-content: space-around;
         flex-direction: column;
-        // width: 40%;
-        // height: 50%;
         padding-right: 3rem;
-        // padding: 5rem 3rem;
     
         h2{
             @include head-md();
             text-transform: uppercase;
-            // margin-bottom: 2rem;
             line-height: 6rem
         }
         p{
@@ -159,16 +146,13 @@ div.bottom-gallery-container{
         padding-left: 5rem;
 
         .img-3{
-            // height: 50%;
             margin-bottom: 5rem;
-            // width: 100%;
         }
 
         .article-2{
             background-color: $dark;
             color: $white;
             padding: 10rem;
-            // height: 50%;
             width: 100%;
             display: flex;
             align-items: center;
@@ -189,12 +173,8 @@ div.bottom-gallery-container{
 
         /******************Footer section******************/
 footer{
-    // padding-top: 10rem;
     background: $dark;
-    
-    // display: grid;
-    // grid-template-columns: 1fr 2fr 1fr;
-    // gap: 4rem;
+
     .footer-container{
         display: flex;
         justify-content: space-between;
@@ -249,7 +229,6 @@ footer{
         position: absolute;
         top: -1%;
         left: 14rem;
-        // margin-left: 14rem;
     
         & span:nth-of-type(1){
             padding: 1.9rem 2rem;
@@ -308,215 +287,5 @@ footer{
         p:not(:last-child){
             padding: 2rem 0;
         }
-    }
-}
-
-
-/***************Responsive layout**************/
-//Desktop
-@media screen and (max-width: 1050px){
-    .hero{
-        // .dark-hero{
-        //     min-height: 80vh;
-        // }
-        .hero-img{
-            // height: 80rem;
-            background: url('/assets/desktop/image-hero.jpg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
-    }
-}
-
-// Tablet
-@media screen and (max-width: 960px){
-    .hero{
-        .dark-hero{
-            display: none;
-        }
-
-        .hero-img{
-            // height: 80rem;
-            background: url('/assets/tablet/image-hero@2x.jpg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            width: 55%;
-        }
-
-        &-text{
-            left: 50%;
-
-            p{
-                @include body-sm();
-                width: 35rem;
-                margin-bottom: 5rem;
-            }
-
-            h1{
-                display: block;
-                @include head-lg();
-                text-transform: uppercase;
-                padding-bottom: 5rem;
-            }
-        }
-    }
-
-    div.top-gallery-container{
-        .article-1 h2{
-            font-size: 4rem;
-            line-height: 4rem;
-            margin-bottom: 0;
-        }
-    }
-
-    div.bottom-gallery-container{
-        .bottom-inner-container{
-            .article-2{
-                padding: 4rem;
-
-                h2{
-                    font-size: 4.5rem;
-                    line-height: 5rem;
-                }
-            }
-        }
-    }
-
-    .location{
-        padding: 8rem;
-    }
-    .map .location-btn{
-        left: 8rem;
-    }
-
-    @media screen and (max-width: 790px){
-        .hero-text{
-            h1{
-                @include head-md();
-                padding-bottom: 3rem;
-            }
-            p{
-                width: 30rem;
-            }
-        }
-
-        div.top-gallery-container{
-            flex-direction: column-reverse;
-
-            .img-1{
-                width: 100%;
-                margin-bottom: 4rem;
-            }
-        }
-        div.bottom-gallery-container{
-            flex-direction: column;
-
-            .bottom-inner-container{
-                width: 100%;
-                padding: 0;
-
-                .img-3{
-                    // width: 100%;
-                    margin-top: 5rem;
-                }
-            }
-        }
-        
-        footer{
-            .footer-container{
-                display: block;
-
-                p{
-                    width: 100%;
-                }
-            }
-            .footer-container :not(:first-child){
-                margin-top: 2rem;
-            }
-        }
-
-        .location{
-            flex-direction: column;
-
-            h1{
-                display: none;
-            }
-
-            .h2{
-                display: block;
-                padding-bottom: 2.5rem;
-            }
-
-            .address{
-                width: 100%;
-
-                p:not(:last-child){
-                    padding: 1.5rem 0;
-                }
-            }
-        }
-        
-    }
-
-    @media screen and (max-width: 650px){
-        .hero-text{
-            h1{
-                @include head-sm();
-                padding-bottom: 2rem;
-            }
-            p{
-                width: 30rem;
-                margin-bottom: 3rem;
-            }
-        }
-    }
-}
-
-// Mobile
-@media screen and (max-width: 550px){
-    .hero{
-        .hero-img{
-            // height: 80rem;
-            background: url('/assets/mobile/image-hero@2x.jpg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            width: 100%;
-            min-height: 45vh;
-        }
-
-        &-text{
-            left: 5%;
-            top: 50%;
-
-            h1{
-                @include head-md();
-                padding-bottom: 2rem;
-            }
-            p{
-                width: 30rem;
-                margin-bottom: 3rem;
-            }
-        }
-    }
-
-    main.container{
-        padding: 0;
-    }
-
-    .map iframe{
-        min-height: 50vh;
-    }
-
-    .location{
-        padding: 5rem;
-        .h2{
-            font-size: 5rem;
-        }
-    }
-    .map .location-btn{
-        left: 0;
     }
 }
