@@ -200,9 +200,12 @@ footer{
         .socials :not(:last-child){
             margin-right: 2rem;
         }
-        .socials img{
-            height: 2.5rem;
+        .socials svg{
             cursor: pointer;
+
+            & :hover{
+                fill: $brown;
+            }
         }
     }
 }
@@ -288,4 +291,8 @@ footer{
             padding: 2rem 0;
         }
     }
+}
+
+.footer-container .socials .dark-icons :hover{
+    fill: $white;
 }

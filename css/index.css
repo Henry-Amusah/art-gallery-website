@@ -208,9 +208,11 @@ footer .footer-container p {
 footer .footer-container .socials :not(:last-child) {
   margin-right: 2rem;
 }
-footer .footer-container .socials img {
-  height: 2.5rem;
+footer .footer-container .socials svg {
   cursor: pointer;
+}
+footer .footer-container .socials svg :hover {
+  fill: #D5966C;
 }
 
 /*****************Location page*****************/
@@ -293,6 +295,10 @@ footer .footer-container .socials img {
 }
 .location .address p:not(:last-child) {
   padding: 2rem 0;
+}
+
+.footer-container .socials .dark-icons :hover {
+  fill: #ffffff;
 }
 
 /***************Responsive layout**************/
